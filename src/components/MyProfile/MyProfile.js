@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Categories() {
+export default function MyProfile() {
   return (
     <div className="profileBody">
       <div>
