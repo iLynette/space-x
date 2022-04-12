@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from './redux/configureStore';
 import Navbar from './components/Navbar/Navbar';
 import Missions from './components/Missions/Missions';
-import Rocket from './components/Rockets/RocketList';
+import RocketList from './components/Rockets/RocketList';
 import MyProfile from './components/MyProfile/MyProfile';
 import Dragons from './components/Dragons/Dragons';
 
