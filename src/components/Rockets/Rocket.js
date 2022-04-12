@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from 'react-redux';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Rocket = (props) => {
   const {
@@ -20,3 +20,12 @@ const Rocket = (props) => {
     </div>
   )
 }
+
+Rocket.propTypes = {
+  rocketId: PropTypes.string.isRequired,
+  rocketName: PropTypes.string.isRequired,
+  rocketDescription: PropTypes.string.isRequired,
+  rocketImage: PropTypes.string.isRequired,
+  rocketReserved: PropTypes.bool.isRequired,
+};
+export default Rocket;
