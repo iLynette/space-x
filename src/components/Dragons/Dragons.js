@@ -1,38 +1,56 @@
-import { useEffect } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Proptypes from 'prop-types';
-import fetchDragons from '../../redux/dragons/dragons';
-// import { rocketDispatcher, reserveRocket,
-// cancelRocketBooking } from '../../redux/dragons/dragons';
+import { fetchDragons } from '../../redux/dragons/dragons';
 
-export function Dragon({ dragon }) {
+export function Dragon(props) {
+  const {
+    id, image, type, name, description, reserved,
+  } = props;
+
   return (
-    <div className="dragonCard" key={dragon.id}>
-      <p className="">{dragon.name}</p>
-      <p className="">{dragon.type}</p>
-      <img src={dragon.flickr_images} alt="dragon" />
-      <button type="button" value={dragon.id} id={dragon.reserved}>reserve</button>
+    <div className="dragonCard">
+      <img className="dragonImage" src={image} alt="dragon" />
+      <div className="dragonInfo">
+        <h2>{name}</h2>
+        <h3>{type}</h3>
+        <p>{description}</p>
+        <button type="button" value={reserved} id={id}>Reserve</button>
+      </div>
     </div>
   );
 }
 
 Dragon.propTypes = {
-  dragon: Proptypes.objectOf(Proptypes.string).isRequired,
+  id: Proptypes.string.isRequired,
+  type: Proptypes.string.isRequired,
+  name: Proptypes.string.isRequired,
+  description: Proptypes.string.isRequired,
+  image: Proptypes.string.isRequired,
+  reserved: Proptypes.bool.isRequired,
 };
 
-export default function Dragons() {
-  // const dragons = useSelector((state) => state.deragonsReducer);
+function Dragons() {
+  const dragons = useSelector((state) => state.dragonsReducer);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchDragons());
   }, []);
   return (
     <>
-      {/* {dragons.map((dragon) => (
-        <Dragon key={dragon.id} dragon={dragon} />
-      ))} */}
+      {dragons.map((Item) => (
+        <Dragon
+          key={Item.id}
+          id={Item.id.toString()}
+          name={Item.name}
+          type={Item.type}
+          description={Item.description}
+          image={Item.image}
+          reserved={Item.reserved}
+        />
+      ))}
     </>
   );
 }
+
+export default Dragons;
