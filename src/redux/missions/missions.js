@@ -5,11 +5,11 @@ const FETCH_ERROR = 'FETCH_ERROR';
 const fetchRequest = () => ({
   type: FETCH_REQUEST,
 });
-const fetchSuccess = () => ({
+const fetchSuccess = (missions) => ({
   type: FETCH_SUCCESS,
   payload: missions,
 });
-const fetchError = () => ({
+const fetchError = (error) => ({
   type: FETCH_ERROR,
   payload: error,
 });
