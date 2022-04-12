@@ -3,3 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* profile styles */
+.profileBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 12%;
+  padding: 5%;
+}
+
+.profileMissions,
+.profileRockets,
+.profileDragons {
+  border: solid 3px rgb(220, 220, 220);
+  border-radius: 5px;
+  min-height: 400px;
+  margin-top: 2%;
+}
