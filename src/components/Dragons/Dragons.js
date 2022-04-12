@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Proptypes from 'prop-types';
-import { fetchDragons } from '../../redux/dragons/dragons';
+import { fetchDragons, reserve } from '../../redux/dragons/dragons';
 
 export function Dragon(props) {
   const {
     id, image, type, name, description, reserved,
   } = props;
+
+  const dragons = useSelector((state) => state.dragonsReducer);
+  const dispatch = useDispatch();
 
   return (
     <div className="dragonCard">
@@ -15,7 +18,12 @@ export function Dragon(props) {
         <h2>{name}</h2>
         <h3>{type}</h3>
         <p>{description}</p>
-        <button type="button" value={reserved} id={id}>Reserve</button>
+        {!reserved && (
+        <button type="button" id={id} onClick={() => dispatch(reserve(dragons, id))}>Reserve</button>
+        )}
+        {reserved && (
+        <button type="button" id={id} onClick={() => dispatch(reserve(dragons, id))}>Cancel Reservation</button>
+        )}
       </div>
     </div>
   );
