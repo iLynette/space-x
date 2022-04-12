@@ -11,6 +11,22 @@ function RocketList() {
       dispatch(listRockets());
     }
   });
+  return (
+    <div className="spacing">
+      <ul className="rocket-list">
+        {rocketsData.map((rocket) => (
+          <Rocket
+            key={rocket.rocketId}
+            rocketId={rocket.rocketId}
+            rocketName={rocket.rocketName}
+            rocketDescription={rocket.rocketDescription}
+            rocketImage={rocket.rocketImage}
+            rocketReserved={rocket.rocketReserved}
+          />
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default RocketList;
