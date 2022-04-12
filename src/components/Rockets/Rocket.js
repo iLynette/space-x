@@ -1,5 +1,4 @@
-import React from "react";
-import { useDispatch } from 'react-redux';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const Rocket = (props) => {
@@ -18,8 +17,8 @@ const Rocket = (props) => {
       </p>
       <button type="button" className="btn" id={rocketReserved}>Reserve Rocket</button>
     </div>
-  )
-}
+  );
+};
 
 Rocket.propTypes = {
   rocketId: PropTypes.string.isRequired,

@@ -17,7 +17,7 @@ function RocketList() {
         {rocketsData.map((rocket) => (
           <Rocket
             key={rocket.rocketId}
-            rocketId={rocket.rocketId}
+            rocketId={rocket.rocketId.toString()}
             rocketName={rocket.rocketName}
             rocketDescription={rocket.rocketDescription}
             rocketImage={rocket.rocketImage}
