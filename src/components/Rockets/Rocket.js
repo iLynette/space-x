@@ -23,7 +23,9 @@ const Rocket = (props) => {
       <p>
         {rocketDescription}
       </p>
-      <button type="button" className="btn" id={rocketReserved}>Reserve Rocket</button>
+      <div>
+        {rocketReserved ? (<button type="button" onClick={handleClick} className="btn">Cancel Reservation</button>) : (<button type="button" className="btn" onClick={handleClick}>Reserve Rocket</button>)}
+      </div>
     </div>
   );
 };
