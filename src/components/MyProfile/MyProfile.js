@@ -24,7 +24,12 @@ export default function MyProfile() {
                 No Rockets Reserved
               </li>
             ) : (
-             
+              reservedRockets
+                .map((rocket) => (
+                  <li key={rocket.rocketId} className="reserved-item">
+                    <span className="name">{rocket.rocketName}</span>
+                  </li>
+                ))
             )}
           </ul>
         </div>
