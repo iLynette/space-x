@@ -6,7 +6,7 @@ import styles from './MissionStyle.css';
 let fetched = false;
 
 const Missions = () => {
-  const missions = useSelector((state) => state.missionReducer.missions);
+  const { mission } = useSelector((state) => state.missionReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,6 +15,7 @@ const Missions = () => {
       fetched = true;
     }
   }, []);
+  if (!fetched) return <h1>I am loading</h1>;
 
   return (
     <table>
@@ -25,7 +26,7 @@ const Missions = () => {
           <th>Status</th>
           <th> </th>
         </tr>
-        {missions.map(
+        {mission.map(
           ({
             mission_name: missionName,
             mission_id: missionId,
@@ -44,7 +45,7 @@ const Missions = () => {
                 </button>
               </td>
             </tr>
-          ),
+          )
         )}
       </tbody>
     </table>
