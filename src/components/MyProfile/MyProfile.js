@@ -27,6 +27,7 @@ export default function MyProfile() {
               reservedRockets
                 .map((rocket) => (
                   <li key={rocket.rocketId} className="reserved-item">
+                    <img src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png" alt="reserved" />
                     <span className="name">{rocket.rocketName}</span>
                   </li>
                 ))
