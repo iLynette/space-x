@@ -1,10 +1,9 @@
 const GET_ROCKETS = 'space-x/redux/rockets/LIST_ROCKETS';
+const TOGGLE_RESERVE = 'space-x/redux/rockets/TOGGLE_RESERVE';
 
-const defaultState = [];
-
-export const addRocket = (rockets) => ({
-  type: GET_ROCKETS,
-  payload: rockets,
+export const toggleReserve = (payload) => ({
+  type: TOGGLE_RESERVE,
+  payload,
 });
 
 export const listRockets = () => async (dispatch) => {
