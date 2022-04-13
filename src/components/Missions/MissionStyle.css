@@ -1,0 +1,52 @@
+table,
+th,
+td {
+  border: 1px solid #dce1e5;
+  padding: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 85%;
+  margin: 1rem auto;
+}
+
+th {
+  text-align: start;
+}
+
+tr:nth-child(even) {
+  background-color: var(--neutral-color);
+}
+
+.mission-name {
+  vertical-align: top;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.mission-description {
+  width: max-content;
+}
+
+.mission-status {
+  white-space: nowrap;
+}
+
+.not-reserved {
+  background-color: var(--neutral-color-2);
+  color: var(--white);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.7rem;
+  font-size: 0.8rem;
+}
+
+.mission-not-join {
+  white-space: nowrap;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--black);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
