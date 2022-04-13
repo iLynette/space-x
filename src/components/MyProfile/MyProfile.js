@@ -18,8 +18,8 @@ export default function MyProfile() {
       <div>
         <h2 className="">My Rockets</h2>
         <div className="profileRockets">
-        <ul className="reserve-rocket">
-            {(reservedRockets.length === 0)? (
+          <ul className="reserve-rocket">
+            {(reservedRockets.length === 0) ? (
               <li className="no-reserved-rocket">
                 No Rockets Reserved
               </li>
