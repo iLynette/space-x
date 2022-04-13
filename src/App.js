@@ -5,12 +5,12 @@ import Missions from './components/Missions/Missions';
 import RocketList from './components/Rockets/RocketList';
 import MyProfile from './components/MyProfile/MyProfile';
 import Dragons from './components/Dragons/Dragons';
-import configureStore from './redux/configureStore';
+import store from './redux/configureStore';
 
 const App = () => (
   <div className="app">
     <Navbar />
-    <Provider store={configureStore}>
+    <Provider store={store}>
       <Routes>
         <Route path="/" element={<RocketList />} />
         <Route path="/missions" element={<Missions />} />
