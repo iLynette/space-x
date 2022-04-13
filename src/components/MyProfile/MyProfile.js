@@ -18,8 +18,15 @@ export default function MyProfile() {
       <div>
         <h2 className="">My Rockets</h2>
         <div className="profileRockets">
-          {/* list of rockets */}
-          {/* <img src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-transport-xnimrodx-blue-xnimrodx.png"/> */}
+        <ul className="reserve-rocket">
+            {(reservedRockets.length === 0)? (
+              <li className="no-reserved-rocket">
+                No Rockets Reserved
+              </li>
+            ) : (
+             
+            )}
+          </ul>
         </div>
       </div>
       <div>
