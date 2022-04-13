@@ -6,6 +6,8 @@ export const toggleReserve = (payload) => ({
   payload,
 });
 
+const defaultState = [];
+
 export const listRockets = () => async (dispatch) => {
   try {
     const fetchData = await fetch(
@@ -28,19 +30,19 @@ export const listRockets = () => async (dispatch) => {
 const rocketReducer = (state = defaultState, action) => {
   switch (action.type) {
     case GET_ROCKETS:
-      { return [
-        ...action.payload,
-      ]; }
-      case TOGGLE_RESERVE: {
-        const updatedState = state.map((rocket) => {
-          if (rocket.rocketId.toString() !== action.payload.id) {
-            console.log(rocket.rocketId)
-            return rocket;
-          }
-          return { ...rocket, rocketReserved: !rocket.rocketReserved };
-        });
-        return [...updatedState];
-      }
+    { return [
+      ...action.payload,
+    ]; }
+    case TOGGLE_RESERVE: {
+      const updatedState = state.map((rocket) => {
+        if (rocket.rocketId.toString() !== action.payload.id) {
+          console.log(rocket.rocketId);
+          return rocket;
+        }
+        return { ...rocket, rocketReserved: !rocket.rocketReserved };
+      });
+      return [...updatedState];
+    }
     default:
       return state;
   }
