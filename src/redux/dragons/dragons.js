@@ -46,10 +46,8 @@ export const reserve = (state, id) => (dispatch) => {
     if (dragons[i].id === id) {
       if (!dragons[i].reserved) {
         dragons[i].reserved = true;
-        alert(dragons[i].reserved);
       } else {
         dragons[i].reserved = false;
-        alert(dragons[i].reserved);
       }
     }
   }
