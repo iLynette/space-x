@@ -16,13 +16,23 @@ export function Dragon(props) {
       <img className="dragonImage" src={image} alt="dragon" />
       <div className="dragonInfo">
         <h2>{name}</h2>
-        <h3>{type}</h3>
-        <p>{description}</p>
+        <h3 className="dragonType">{type}</h3>
+        {reserved && (
+          <>
+            <p>
+              <span className="dragonReserved">reserved</span>
+              {description}
+            </p>
+          </>
+        )}
         {!reserved && (
-        <button type="button" id={id} onClick={() => dispatch(reserve(dragons, id))}>Reserve</button>
+          <p>{description}</p>
+        )}
+        {!reserved && (
+        <button className="reservDragon" type="button" id={id} onClick={() => dispatch(reserve(dragons, id))}>Reserve</button>
         )}
         {reserved && (
-        <button type="button" id={id} onClick={() => dispatch(reserve(dragons, id))}>Cancel Reservation</button>
+          <button className="cancelDragon" type="button" id={id} onClick={() => dispatch(reserve(dragons, id))}>Cancel Reservation</button>
         )}
       </div>
     </div>
