@@ -1,11 +1,12 @@
 const GET_ROCKETS = 'space-x/redux/rockets/LIST_ROCKETS';
+const TOGGLE_RESERVE = 'space-x/redux/rockets/TOGGLE_RESERVE';
+
+export const toggleReserve = (payload) => ({
+  type: TOGGLE_RESERVE,
+  payload,
+});
 
 const defaultState = [];
-
-export const addRocket = (rockets) => ({
-  type: GET_ROCKETS,
-  payload: rockets,
-});
 
 export const listRockets = () => async (dispatch) => {
   try {
@@ -29,9 +30,19 @@ export const listRockets = () => async (dispatch) => {
 const rocketReducer = (state = defaultState, action) => {
   switch (action.type) {
     case GET_ROCKETS:
-      return [
-        ...action.payload,
-      ];
+    { return [
+      ...action.payload,
+    ]; }
+    case TOGGLE_RESERVE: {
+      const updatedState = state.map((rocket) => {
+        if (rocket.rocketId.toString() !== action.payload.id) {
+          console.log(rocket.rocketId);
+          return rocket;
+        }
+        return { ...rocket, rocketReserved: !rocket.rocketReserved };
+      });
+      return [...updatedState];
+    }
     default:
       return state;
   }
