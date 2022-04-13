@@ -8,6 +8,12 @@ const Rocket = (props) => {
     rocketId, rocketName, rocketDescription, rocketImage, rocketReserved,
   } = props;
 
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(toggleReserve({ id: rocketId }));
+  };
+
   return (
     <div className="rocket-container" key={rocketId}>
       <div>
