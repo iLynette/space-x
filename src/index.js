@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import App from './App';
-import store from './redux/ConfigureStore';
+import store from './redux/configureStore';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,5 +14,5 @@ ReactDOM.render(
       </Router>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );
