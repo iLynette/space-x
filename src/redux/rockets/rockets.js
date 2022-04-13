@@ -18,7 +18,7 @@ export const listRockets = () => async (dispatch) => {
       type: GET_ROCKETS,
       payload: apiRockets.map((rocket) => ({
         rocketId: rocket.id,
-        rocketName: rocket.name,
+        rocketName: rocket.rocket_name,
         rocketDescription: rocket.description,
         rocketImage: rocket.flickr_images[0],
         rocketReserved: false,
