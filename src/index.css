@@ -24,6 +24,16 @@
   margin-top: 2%;
 }
 
+.profileCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: solid 1px #007bff;
+  border-radius: 5px;
+  margin: 2%;
+  padding: 2%;
+}
+
 /* dragon styles */
 .dragonCard {
   display: flex;
