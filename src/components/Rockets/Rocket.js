@@ -21,6 +21,12 @@ const Rocket = (props) => {
       </div>
       <h1>{rocketName}</h1>
       <p>
+        {
+        rocketReserved
+          ? (
+            <span className="badge">Reserved</span>
+          ) : null
+}
         {rocketDescription}
       </p>
       <div>
