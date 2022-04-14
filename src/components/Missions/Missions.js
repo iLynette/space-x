@@ -42,7 +42,13 @@ const Missions = () => {
               <td className={styles['mission-description']}>{description}</td>
               <td className={styles['mission-status']}>
                 {' '}
-                <p className={styles['not-reserved']}>NOT A MEMBER</p>
+                <p
+                  className={
+                    reserved ? styles.reserved : styles['not-reserved']
+                  }
+                >
+                  {reserved ? 'Active Member' : 'NOT A MEMBER'}
+                </p>
               </td>
               <td>
                 <button
