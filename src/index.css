@@ -96,10 +96,6 @@
   margin: 20px 50px;
 }
 
-.reserve-rocket {
-  /* padding-top: 15px; */
-}
-
 .btn {
   background-color: #007bff;
   font-family: 'Poppins', sans-serif;
@@ -137,4 +133,8 @@
 span.name {
   font-size: 20px;
   font-weight: 600;
+}
+
+.content p {
+  width: 80%;
 }
