@@ -55,11 +55,12 @@ const Missions = () => {
                   }
                   type="button"
                 >
-                  {reserved ? 'Leave Mission' : 'Join Mission'}{' '}
+                  {reserved ? 'Leave Mission' : 'Join Mission'}
+                  {' '}
                 </button>
               </td>
             </tr>
-          )
+          ),
         )}
       </tbody>
     </table>
