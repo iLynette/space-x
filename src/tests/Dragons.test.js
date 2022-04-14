@@ -39,3 +39,12 @@ describe('Dragon tests', () => {
     expect(tree).toMatchSnapshot();
   });
 });
+
+it('Test the whole functionality of dragons page', () => {
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Dragons />
+    </Provider>,
+  );
+  expect(tree).toMatchSnapshot();
+});
