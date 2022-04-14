@@ -1,0 +1,61 @@
+@import url('http://fonts.cdnfonts.com/css/d-din');
+
+.container {
+  margin: 0.6rem 6.2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #cbcbcb;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  font-family: 'D-DIN', sans-serif;
+  font-family: 'D-DIN Condensed', sans-serif;
+  font-family: 'D-DIN Exp', sans-serif;
+  margin-right: 0.5rem;
+}
+
+.list li:nth-child(5) {
+  border-right: 1px solid var(--black);
+  list-style: none;
+  margin: 0 1rem;
+  padding: 0 1rem;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1.25rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: spin-logo infinite 20s linear;
+  }
+}
+
+.topic {
+  flex: 3;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes spin-logo {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -41,11 +41,22 @@ tr:nth-child(even) {
   font-size: 0.8rem;
 }
 
-.mission-not-join {
+.mission-not-joined {
   white-space: nowrap;
   background-color: transparent;
   outline: none;
   border: 1px solid var(--black);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.mission-joined {
+  white-space: nowrap;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--red);
+  color: var(--red);
   padding: 0.5rem 0.8rem;
   border-radius: 0.3rem;
   cursor: pointer;

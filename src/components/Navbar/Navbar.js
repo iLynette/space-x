@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../../images/logoBW.png';
+import styles from './Navbar.module.css';
 
 const link = [
   {
@@ -25,8 +27,12 @@ const link = [
 ];
 
 const Navbar = () => (
-  <nav>
-    <ul>
+  <nav className={styles.container}>
+    <ul className={styles.list}>
+      <li className={styles.topic}>
+        <img src={logo} className={styles.logo} alt="travelers site logo" />
+        <h1 style={{ fontSize: '2.1rem' }}>SPACE X</h1>
+      </li>
       {link.map(({ id, path, text }) => (
         <li key={id}>
           <NavLink
