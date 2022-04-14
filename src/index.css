@@ -18,7 +18,7 @@
 .profileMissions,
 .profileRockets,
 .profileDragons {
-  border: solid 3px rgb(220, 220, 220);
+  /* border: solid 3px rgb(220, 220, 220); */
   border-radius: 5px;
   min-height: 400px;
   margin-top: 2%;
@@ -85,10 +85,6 @@
   font-size: smaller;
 }
 
-.rockets {
-  /* background-color: red; */
-}
-
 .rocket-container {
   display: flex;
   justify-content: center;
@@ -122,4 +118,9 @@
   padding: 4px;
   margin: 2% 0.5%;
   font-size: smaller;
+}
+
+.reserved-item,
+.no-reserved-rocket {
+  list-style-type: none;
 }
