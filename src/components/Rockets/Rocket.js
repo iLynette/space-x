@@ -30,9 +30,9 @@ const Rocket = (props) => {
 }
         {rocketDescription}
       </p>
-      </div>
-      <div>
-        {rocketReserved ? (<button type="button" onClick={handleClick} className="btn">Cancel Reservation</button>) : (<button type="button" className="btn" onClick={handleClick}>Reserve Rocket</button>)}
+        <div className="reserve-rocket">
+          {rocketReserved ? (<button type="button" onClick={handleClick} className="btn">Cancel Reservation</button>) : (<button type="button" className="btn" onClick={handleClick}>Reserve Rocket</button>)}
+        </div>
       </div>
     </div>
   );
