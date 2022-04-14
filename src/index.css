@@ -138,3 +138,13 @@ span.name {
 .content p {
   width: 80%;
 }
+
+.cancel {
+  padding: 1% 3%;
+  margin-top: 1%;
+  background-color: white;
+  color: #90969c;
+  border: solid 1px grey;
+  border-radius: 5px;
+  cursor: pointer;
+}
