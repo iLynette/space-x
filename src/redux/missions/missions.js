@@ -51,8 +51,10 @@ export const missionReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         mission: state.mission.map((mission) => {
-          if (mission.mission_id !== action.payload) return mission;
-          return { ...mission, reserved: true };
+          if (mission.mission_id === action.payload) {
+            return { ...mission, reserved: !mission.reserved };
+          }
+          return mission;
         }),
         error: '',
       };
