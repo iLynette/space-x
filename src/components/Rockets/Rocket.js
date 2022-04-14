@@ -19,18 +19,20 @@ const Rocket = (props) => {
       <div>
         <img src={rocketImage} alt="/" />
       </div>
-      <h1>{rocketName}</h1>
-      <p>
-        {
+      <div className="content">
+        <h1>{rocketName}</h1>
+        <p>
+          {
         rocketReserved
           ? (
             <span className="badge">Reserved</span>
           ) : null
 }
-        {rocketDescription}
-      </p>
-      <div>
-        {rocketReserved ? (<button type="button" onClick={handleClick} className="btn">Cancel Reservation</button>) : (<button type="button" className="btn" onClick={handleClick}>Reserve Rocket</button>)}
+          {rocketDescription}
+        </p>
+        <div className="reserve-rocket">
+          {rocketReserved ? (<button type="button" onClick={handleClick} className="btn cancel">Cancel Reservation</button>) : (<button type="button" className="btn" onClick={handleClick}>Reserve Rocket</button>)}
+        </div>
       </div>
     </div>
   );

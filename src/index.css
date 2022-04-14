@@ -18,7 +18,7 @@
 .profileMissions,
 .profileRockets,
 .profileDragons {
-  border: solid 3px rgb(220, 220, 220);
+  /* border: solid 3px rgb(220, 220, 220); */
   border-radius: 5px;
   min-height: 400px;
   margin-top: 2%;
@@ -83,4 +83,68 @@
   padding: 0.2% 1%;
   margin: 2% 0.5%;
   font-size: smaller;
+}
+
+.rocket-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rocket-container img {
+  width: 300px;
+  margin: 20px 50px;
+}
+
+.btn {
+  background-color: #007bff;
+  font-family: 'Poppins', sans-serif;
+  padding: 1% 3%;
+  margin-top: 1%;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.badge {
+  background-color: green;
+  color: white;
+  border-radius: 3px;
+  padding: 4px;
+  margin: 2% 0.5%;
+  font-size: smaller;
+}
+
+.reserved-item,
+.no-reserved-rocket {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: solid 1px #007bff;
+  border-radius: 5px;
+  margin: 2%;
+  padding: 2%;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+span.name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content p {
+  width: 80%;
+}
+
+.cancel {
+  padding: 1% 3%;
+  margin-top: 1%;
+  background-color: white;
+  color: #90969c;
+  border: solid 1px grey;
+  border-radius: 5px;
+  cursor: pointer;
 }

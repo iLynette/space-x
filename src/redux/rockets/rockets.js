@@ -36,7 +36,6 @@ const rocketReducer = (state = defaultState, action) => {
     case TOGGLE_RESERVE: {
       const updatedState = state.map((rocket) => {
         if (rocket.rocketId.toString() !== action.payload.id) {
-          console.log(rocket.rocketId);
           return rocket;
         }
         return { ...rocket, rocketReserved: !rocket.rocketReserved };

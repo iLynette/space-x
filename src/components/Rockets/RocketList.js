@@ -12,7 +12,7 @@ function RocketList() {
     }
   });
   return (
-    <div className="spacing">
+    <div className="rockets">
       <ul className="rocket-list">
         {rocketsData.map((rocket) => (
           <Rocket
