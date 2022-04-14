@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import fetchMissions from '../../redux/missions/missions';
-import styles from './MissionStyle.css';
+import fetchMissions, { joinMission } from '../../redux/missions/missions';
+import styles from './Mission.module.css';
 
 let fetched = false;
 
@@ -17,6 +17,10 @@ const Missions = () => {
   }, []);
   if (!fetched) return <h1>I am loading</h1>;
 
+  const handleClick = (id) => {
+    dispatch(joinMission(id));
+  };
+
   return (
     <table>
       <tbody>
@@ -31,6 +35,7 @@ const Missions = () => {
             mission_name: missionName,
             mission_id: missionId,
             description,
+            reserved,
           }) => (
             <tr key={missionId}>
               <td className={styles['mission-name']}>{missionName}</td>
@@ -40,7 +45,18 @@ const Missions = () => {
                 <p className={styles['not-reserved']}>NOT A MEMBER</p>
               </td>
               <td>
-                <button className={styles['mission-not-join']} type="button">
+                <button
+                  id={missionId}
+                  onClick={(e) => handleClick(e.target.id)}
+                  className={
+                    reserved
+                      ? styles['mission-joined']
+                      : styles['mission-not-joined']
+                  }
+                  type="button"
+                >
+                  {reserved ? 'Leave Mission' : 'Join Mission'}
+                  {' '}
                   Join Mission
                 </button>
               </td>
