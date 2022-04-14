@@ -52,7 +52,9 @@ function Dragons() {
   const dragons = useSelector((state) => state.dragonsReducer);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchDragons());
+    if (dragons.length === 0) {
+      dispatch(fetchDragons());
+    }
   }, []);
   return (
     <>
