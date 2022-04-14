@@ -114,3 +114,12 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.badge {
+  background-color: green;
+  color: white;
+  border-radius: 3px;
+  padding: 4px;
+  margin: 2% 0.5%;
+  font-size: smaller;
+}
