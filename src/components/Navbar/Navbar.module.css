@@ -13,9 +13,11 @@
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style: none;
 }
+
 a {
   font-family: 'D-DIN', sans-serif;
   font-family: 'D-DIN Condensed', sans-serif;
