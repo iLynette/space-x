@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 
 export default function MyProfile() {
   const dragons = useSelector((state) => state.dragonsReducer);
+  const rockets = useSelector((state) => state.rocketReducer);
+  const reservedRockets = rockets.filter((rocket) => rocket.rocketReserved);
 
   return (
     <div className="profileBody">
@@ -16,8 +18,21 @@ export default function MyProfile() {
       <div>
         <h2 className="">My Rockets</h2>
         <div className="profileRockets">
-          {/* list of rockets */}
-          {/* <img src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-transport-xnimrodx-blue-xnimrodx.png"/> */}
+          <ul className="reserve-rocket">
+            {(reservedRockets.length === 0) ? (
+              <li className="no-reserved-rocket">
+                No Rockets Reserved
+              </li>
+            ) : (
+              reservedRockets
+                .map((rocket) => (
+                  <li key={rocket.rocketId} className="reserved-item">
+                    <img src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png" alt="reserved" />
+                    <span className="name">{rocket.rocketName}</span>
+                  </li>
+                ))
+            )}
+          </ul>
         </div>
       </div>
       <div>
