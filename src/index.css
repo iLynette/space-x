@@ -84,3 +84,18 @@
   margin: 2% 0.5%;
   font-size: smaller;
 }
+
+.rockets {
+  /* background-color: red; */
+}
+
+.rocket-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rocket-container img {
+  width: 300px;
+  margin: 20px;
+}
