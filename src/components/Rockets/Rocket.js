@@ -19,6 +19,7 @@ const Rocket = (props) => {
       <div>
         <img src={rocketImage} alt="/" />
       </div>
+      <div className="content">
       <h1>{rocketName}</h1>
       <p>
         {
@@ -29,6 +30,7 @@ const Rocket = (props) => {
 }
         {rocketDescription}
       </p>
+      </div>
       <div>
         {rocketReserved ? (<button type="button" onClick={handleClick} className="btn">Cancel Reservation</button>) : (<button type="button" className="btn" onClick={handleClick}>Reserve Rocket</button>)}
       </div>
