@@ -29,4 +29,13 @@ describe('Rocket tests', () => {
       );
       expect(tree).toMatchSnapshot();
     });
+
+    it('Test if rockets render correctly', () => {
+        const tree = renderer.create(
+          <Provider store={store}>
+            <Rockets />
+          </Provider>,
+        );
+        expect(tree).toMatchSnapshot();
+      });
   });
