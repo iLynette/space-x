@@ -18,10 +18,11 @@ describe('Dragon tests', () => {
     const tree = renderer.create(
       <Provider store={store}>
         <Dragon
-          description={dragon.description}
+          id={dragon.id}
           image={dragon.image}
           name={dragon.name}
-          id={dragon.id}
+          type={dragon.type}
+          description={dragon.description}
           reserved={dragon.reserved}
         />
       </Provider>,
@@ -29,7 +30,7 @@ describe('Dragon tests', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('Test the whole functionality', () => {
+  it('Test the whole functionality of dragons page', () => {
     const tree = renderer.create(
       <Provider store={store}>
         <Dragons />
