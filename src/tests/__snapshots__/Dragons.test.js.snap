@@ -27,7 +27,7 @@ exports[`Dragon tests render test 1`] = `
     </p>
     <button
       className="reservDragon"
-      id={1}
+      id="1"
       onClick={[Function]}
       type="button"
     >
@@ -36,5 +36,3 @@ exports[`Dragon tests render test 1`] = `
   </div>
 </div>
 `;
-
-exports[`Test the whole functionality of dragons page 1`] = `null`;

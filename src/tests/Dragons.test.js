@@ -7,8 +7,9 @@ import Dragons, { Dragon } from '../components/Dragons/Dragons';
 describe('Dragon tests', () => {
   it('render test', () => {
     const dragon = {
-      id: 1,
-      image: 'https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png',
+      id: '1',
+      image:
+        'https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png',
       name: 'dragon1',
       type: 'capsule',
       description: 'description for dragon1',
@@ -38,13 +39,4 @@ describe('Dragon tests', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-});
-
-it('Test the whole functionality of dragons page', () => {
-  const tree = renderer.create(
-    <Provider store={store}>
-      <Dragons />
-    </Provider>,
-  );
-  expect(tree).toMatchSnapshot();
 });
