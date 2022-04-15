@@ -7,6 +7,17 @@
   font-family: 'Poppins', sans-serif;
 }
 
+:root {
+  --primary: #fff;
+  --accent-color: #0079f9;
+  --accent-color-2: #00ff5191;
+  --neutral-color: #f2f2f2;
+  --neutral-color-2: #636c75;
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+}
+
 /* profile styles */
 .profileBody {
   display: grid;
