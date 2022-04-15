@@ -2,7 +2,7 @@
 
 # Space Traveler
 
-![screenshot](./src/images/presentation.gif)
+![screenshot](./src/images/spacex.gif)
 
 [Project Demo]()
 
@@ -49,8 +49,8 @@ To get a local copy up and running follow these simple example steps.
 #### Clone this repository
 
 ```bash
-$ git@github.com:clintonjosephs/Space-traveler.git
-$ cd Space-traveler
+$ git@github.com:iLynette/space-x.git
+$ cd space-x
 ```
 
 #### Run project
