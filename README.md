@@ -2,7 +2,7 @@
 
 # Space Traveler
 
-![screenshot](./src/images/spacex.gif)
+![screenshot](./src/images/screenshot.png)
 
 [Project Demo]()
 
@@ -66,9 +66,10 @@ $ npm start
 👤 **Fatemeh Zahra Arshia**
 
 - GitHub: [@ZahraArshia](https://github.com/ZahraArshia)
+- Twitter: [@ZahraArshia](https://twitter.com)
 - LinkedIn: [Zahra Arshia](https://www.linkedin.com/in/zahra-arshia/)
 
-👤 **Lynette Aluoch**
+👤 **Lynette Aluoch Acholah**
 
 - GitHub: [@iLynette](https://github.com/iLynette)
 - Twitter: [@acholah_lynette](https://twitter.com/acholah_lynette)
