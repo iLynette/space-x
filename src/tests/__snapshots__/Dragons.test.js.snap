@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dragon tests Test the whole functionality of dragons page  1`] = `null`;
+exports[`Dragon tests Test the whole functionality of dragons page 1`] = `null`;
 
 exports[`Dragon tests render test 1`] = `
 <div
@@ -36,3 +36,5 @@ exports[`Dragon tests render test 1`] = `
   </div>
 </div>
 `;
+
+exports[`Test the whole functionality of dragons page 1`] = `null`;
