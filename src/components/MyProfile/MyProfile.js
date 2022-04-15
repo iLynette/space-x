@@ -5,16 +5,17 @@ export default function MyProfile() {
   const dragons = useSelector((state) => state.dragonsReducer);
   const rockets = useSelector((state) => state.rocketReducer);
   const reservedRockets = rockets.filter((rocket) => rocket.rocketReserved);
-  const reservedMission = useSelector((state) => state.missionReducer.mission.filter(
-    (missionItem) => missionItem.reserved === true,
-  ));
+  const reservedMission = useSelector((state) =>
+    state.missionReducer.mission.filter(
+      (missionItem) => missionItem.reserved === true
+    )
+  );
   return (
     <div className="profileBody">
       <div>
-        <h2 className="">My Missions</h2>
+        <h2 className="reserve">My Missions</h2>
         <div className="profileMissions">
-          {/* list of missions */}
-          <ul className="reserve-mission">
+          <ul className="profileCard">
             {reservedMission.length === 0 ? (
               <li className="no-reserved-mission">No Mission Reserved</li>
             ) : (
