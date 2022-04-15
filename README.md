@@ -4,7 +4,7 @@
 
 ![screenshot](./src/images/screenshot.png)
 
-[Project Demo]()
+[Live Link](https://space-x-travellers.netlify.app/)
 
 > Space Traveler's website was built with real live data from the SpaceX API. The application provides commercial and scientific space travel services that allow users book rockets and join selected space missions.
 
