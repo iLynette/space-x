@@ -13,7 +13,7 @@ export default function MyProfile() {
       <div>
         <h2 className="reserve">My Missions</h2>
         <div className="profileMissions">
-          <ul className="profileCard">
+          <ul>
             {reservedMission.length === 0 ? (
               <li className="no-reserved-mission">No Mission Reserved</li>
             ) : (
