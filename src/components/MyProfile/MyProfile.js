@@ -5,11 +5,9 @@ export default function MyProfile() {
   const dragons = useSelector((state) => state.dragonsReducer);
   const rockets = useSelector((state) => state.rocketReducer);
   const reservedRockets = rockets.filter((rocket) => rocket.rocketReserved);
-  const reservedMission = useSelector((state) =>
-    state.missionReducer.mission.filter(
-      (missionItem) => missionItem.reserved === true
-    )
-  );
+  const reservedMission = useSelector((state) => state.missionReducer.mission.filter(
+    (missionItem) => missionItem.reserved === true,
+  ));
   return (
     <div className="profileBody">
       <div>
