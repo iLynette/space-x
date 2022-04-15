@@ -12,7 +12,17 @@ exports[`Test profile 1`] = `
     </h2>
     <div
       className="profileMissions"
-    />
+    >
+      <ul
+        className="reserve-mission"
+      >
+        <li
+          className="no-reserved-mission"
+        >
+          No Mission Reserved
+        </li>
+      </ul>
+    </div>
   </div>
   <div>
     <h2
