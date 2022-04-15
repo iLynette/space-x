@@ -22,14 +22,14 @@ a {
   font-family: 'D-DIN', sans-serif;
   font-family: 'D-DIN Condensed', sans-serif;
   font-family: 'D-DIN Exp', sans-serif;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
-.list li:nth-child(5) {
+.list li:nth-child(4) {
   border-right: 1px solid var(--black);
   list-style: none;
-  margin: 0 1rem;
-  padding: 0 1rem;
+  margin-right: 1rem;
+  /* padding: 0 1rem; */
 }
 
 .logo {
