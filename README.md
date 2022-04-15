@@ -66,6 +66,7 @@ $ npm start
 👤 **Fatemeh Zahra Arshia**
 
 - GitHub: [@ZahraArshia](https://github.com/ZahraArshia)
+- Twitter: [@ZahraArshia](https://twitter.com/)
 - LinkedIn: [Zahra Arshia](https://www.linkedin.com/in/zahra-arshia/)
 
 👤 **Lynette Aluoch**
