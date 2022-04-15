@@ -6,16 +6,14 @@ exports[`Test profile 1`] = `
 >
   <div>
     <h2
-      className=""
+      className="reserve"
     >
       My Missions
     </h2>
     <div
       className="profileMissions"
     >
-      <ul
-        className="reserve-mission"
-      >
+      <ul>
         <li
           className="no-reserved-mission"
         >
