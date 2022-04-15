@@ -3,19 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import fetchMissions, { joinMission } from '../../redux/missions/missions';
 import styles from './Mission.module.css';
 
-let fetched = false;
-
 const Missions = () => {
   const { mission } = useSelector((state) => state.missionReducer);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!fetched) {
+    if (!mission.length) {
       dispatch(fetchMissions());
-      fetched = true;
     }
   }, []);
-  if (!fetched) return <h1>I am loading</h1>;
 
   const handleClick = (id) => {
     dispatch(joinMission(id));
