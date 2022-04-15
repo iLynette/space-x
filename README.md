@@ -2,7 +2,7 @@
 
 # Space Traveler
 
-![screenshot](./src/images/spacex.gif)
+![screenshot](./src/images/screenshot.png)
 
 [Project Demo]()
 
