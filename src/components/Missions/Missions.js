@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import fetchMissions, { joinMission } from '../../redux/missions/missions';
@@ -39,25 +40,24 @@ const Missions = () => {
               <td className={styles['mission-status']}>
                 {' '}
                 <p
-                  className={
-                    reserved ? styles.reserved : styles['not-reserved']
-                  }
+                  // reserved ? styles.reserved : styles['not-reserved']
+                  className={reserved && styles.reserved}
+                  {...(!reserved && styles['not-reserved'])}
                 >
-                  {reserved ? 'Active Member' : 'NOT A MEMBER'}
+                  {reserved && 'Active Member'}
+                  {!reserved && 'NOT A MEMBER'}
                 </p>
               </td>
               <td>
                 <button
                   id={missionId}
                   onClick={(e) => handleClick(e.target.id)}
-                  className={
-                    reserved
-                      ? styles['mission-joined']
-                      : styles['mission-not-joined']
-                  }
+                  className={reserved && styles['mission-joined']}
+                  {...(!reserved && styles['mission-not-joined'])}
                   type="button"
                 >
-                  {reserved ? 'Leave Mission' : 'Join Mission'}
+                  {reserved && 'Leave Mission'}
+                  {!reserved && 'Join Mission'}
                   {' '}
                 </button>
               </td>

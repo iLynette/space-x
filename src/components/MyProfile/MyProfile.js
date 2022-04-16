@@ -14,10 +14,12 @@ export default function MyProfile() {
         <h2 className="reserve">My Missions</h2>
         <div className="profileMissions">
           <ul>
-            {reservedMission.length === 0 ? (
+            {reservedMission.length === 0 && (
               <li className="no-reserved-mission">No Mission Reserved</li>
-            ) : (
-              reservedMission.map((mission) => (
+            )}
+
+            {!(reservedMission.length === 0)
+              && reservedMission.map((mission) => (
                 <li key={mission.mission_id} className="reserved-item">
                   <img
                     src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png"
@@ -25,8 +27,7 @@ export default function MyProfile() {
                   />
                   <span className="name">{mission.mission_name}</span>
                 </li>
-              ))
-            )}
+              ))}
           </ul>
         </div>
       </div>
@@ -34,10 +35,11 @@ export default function MyProfile() {
         <h2 className="">My Rockets</h2>
         <div className="profileRockets">
           <ul className="reserve-rocket">
-            {reservedRockets.length === 0 ? (
+            {reservedRockets.length === 0 && (
               <li className="no-reserved-rocket">No Rockets Reserved</li>
-            ) : (
-              reservedRockets.map((rocket) => (
+            )}
+            {!(reservedRockets.length === 0)
+              && reservedRockets.map((rocket) => (
                 <li key={rocket.rocketId} className="reserved-item">
                   <img
                     src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png"
@@ -45,8 +47,7 @@ export default function MyProfile() {
                   />
                   <span className="name">{rocket.rocketName}</span>
                 </li>
-              ))
-            )}
+              ))}
           </ul>
         </div>
       </div>
@@ -73,18 +74,19 @@ export default function MyProfile() {
                   ))
               )}
             </ul> */}
-            {
-        dragons.map((dragon) => (
-          <div key={dragon.id} className="profileCard">
-            {dragon.reserved && (
-            <>
-              <img src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png" alt="reserved" />
-              <h3>{dragon.name}</h3>
-            </>
-            )}
-          </div>
-        ))
-      }
+            {dragons.map((dragon) => (
+              <div key={dragon.id} className="profileCard">
+                {dragon.reserved && (
+                  <>
+                    <img
+                      src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png"
+                      alt="reserved"
+                    />
+                    <h3>{dragon.name}</h3>
+                  </>
+                )}
+              </div>
+            ))}
           </>
         </div>
       </div>
