@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test profile 1`] = `
+<div
+  className="profileBody"
+>
+  <div>
+    <h2
+      className="reserve"
+    >
+      My Missions
+    </h2>
+    <div
+      className="profileMissions"
+    >
+      <ul>
+        <li
+          className="no-reserved-mission"
+        >
+          No Mission Reserved
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h2
+      className=""
+    >
+      My Rockets
+    </h2>
+    <div
+      className="profileRockets"
+    >
+      <ul
+        className="reserve-rocket"
+      >
+        <li
+          className="no-reserved-rocket"
+        >
+          No Rockets Reserved
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h2
+      className=""
+    >
+      My Dragons
+    </h2>
+    <div
+      className="profileDragons"
+    >
+      <ul>
+        <li
+          className="profileCard"
+        >
+          <p>
+            No Dragons Reserved
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

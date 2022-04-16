@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rocket tests Test if rockets render correctly 1`] = `null`;
+
+exports[`Rocket tests render test 1`] = `
+<div
+  className="rockets"
+>
+  <ul
+    className="rocket-list"
+  />
+</div>
+`;

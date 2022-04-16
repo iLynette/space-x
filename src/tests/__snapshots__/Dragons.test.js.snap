@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dragon tests Test the whole functionality of dragons page 1`] = `null`;
+
+exports[`Dragon tests render test 1`] = `
+<div
+  className="dragonCard"
+>
+  <img
+    alt="dragon"
+    className="dragonImage"
+    src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png"
+  />
+  <div
+    className="dragonInfo"
+  >
+    <h2>
+      dragon1
+    </h2>
+    <h3
+      className="dragonType"
+    >
+      capsule
+    </h3>
+    <p>
+      description for dragon1
+    </p>
+    <button
+      className="reservDragon"
+      id="1"
+      onClick={[Function]}
+      type="button"
+    >
+      Reserve
+    </button>
+  </div>
+</div>
+`;

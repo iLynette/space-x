@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.my-journeys {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+}
+
+.my-journeys li {
+  padding: 1rem;
+}
+
+.my-journeys li:nth-child(2) {
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.my-journeys li:not(:first-child) {
+  border-top: 1px solid #dce1e5;
+  border-left: 1px solid #dce1e5;
+  border-right: 1px solid #dce1e5;
+}
+
+.my-journeys li:last-child {
+  border-bottom: 1px solid #dce1e5;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
