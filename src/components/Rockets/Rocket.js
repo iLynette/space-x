@@ -24,9 +24,9 @@ const Rocket = (props) => {
         <p>
           {
         rocketReserved
-          ? (
+          &&
             <span className="badge">Reserved</span>
-          ) : null
+          
 }
           {rocketDescription}
         </p>
