@@ -40,7 +40,6 @@ const Missions = () => {
               <td className={styles['mission-status']}>
                 {' '}
                 <p
-                  // reserved ? styles.reserved : styles['not-reserved']
                   className={reserved && styles.reserved}
                   {...(!reserved && styles['not-reserved'])}
                 >

@@ -5,7 +5,11 @@ import { toggleReserve } from '../../redux/rockets/rockets';
 
 const Rocket = (props) => {
   const {
-    rocketId, rocketName, rocketDescription, rocketImage, rocketReserved,
+    rocketId,
+    rocketName,
+    rocketDescription,
+    rocketImage,
+    rocketReserved,
   } = props;
 
   const dispatch = useDispatch();
@@ -22,15 +26,20 @@ const Rocket = (props) => {
       <div className="content">
         <h1>{rocketName}</h1>
         <p>
-          {
-        rocketReserved
-          && <span className="badge">Reserved</span>
-
-}
+          {rocketReserved && <span className="badge">Reserved</span>}
           {rocketDescription}
         </p>
         <div className="reserve-rocket">
-          {!rocketReserved ? (<button type="button" className="btn" onClick={handleClick}>Reserve Rocket</button>) : (<button type="button" onClick={handleClick} className="btn cancel">Cancel Reservation</button>)}
+          {!rocketReserved && (
+            <button type="button" className="btn" onClick={handleClick}>
+              Reserve Rocket
+            </button>
+          )}
+          {rocketReserved && (
+            <button type="button" onClick={handleClick} className="btn cancel">
+              Cancel Reservation
+            </button>
+          )}
         </div>
       </div>
     </div>
