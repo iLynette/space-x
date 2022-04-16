@@ -24,9 +24,8 @@ const Rocket = (props) => {
         <p>
           {
         rocketReserved
-          &&
-            <span className="badge">Reserved</span>
-          
+          && <span className="badge">Reserved</span>
+
 }
           {rocketDescription}
         </p>
