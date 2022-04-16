@@ -55,25 +55,6 @@ export default function MyProfile() {
         <h2 className="">My Dragons</h2>
         <div className="profileDragons">
           <>
-            {/* <ul>
-              {dragons.length === 0 ? (
-                <li className="profileCard">
-                  <p>No Dragons Reserved</p>
-                </li>
-              ) : (
-                dragons
-                  .filter(({ reserved }) => reserved === true)
-                  .map((dragon) => (
-                    <li key={dragon.id} className="profileCard">
-                      <img
-                        src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/64/000000/external-rocket-online-marketing-xnimrodx-blue-xnimrodx.png"
-                        alt="reserved"
-                      />
-                      <h3>{dragon.name}</h3>
-                    </li>
-                  ))
-              )}
-            </ul> */}
             {dragons.map((dragon) => (
               <div key={dragon.id} className="profileCard">
                 {dragon.reserved && (
